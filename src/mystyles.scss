@@ -1,0 +1,23 @@
+$blue-color: teal;
+
+body {
+  width: 100%;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+
+img {
+  width: 750px;
+}
+
+.holaMundo {
+  background-color: $blue-color;
+  width: 100%;
+  text-align: center;
+}
