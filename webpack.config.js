@@ -7,21 +7,21 @@ const basePath = __dirname;
 module.exports = {
     context: path.join(basePath, "src"),
     resolve: {
-        extensions: ['.js', '.jsx']
+        extensions: [".js",".ts", ".tsx"]
     },
+    stats: "errors-only",
     entry: {
-        app: ["./index.js", "./holaMundoReact.jsx"],
+        app: ["./index.ts", "./holaMundoReact.tsx"],
         appStyles: ['./mystyles.scss'],
         vendorStyles: ['../node_modules/bootstrap/dist/css/bootstrap.css']
     },
-    
     output: {
         filename: '[name].[chunkhash].js'
     },
     module: {
         rules: [
             {
-                test: /\.jsx?$/,
+                test: /\.tsx?$/,
                 exclude: /node_modules/,
                 loader: "babel-loader"
             },
